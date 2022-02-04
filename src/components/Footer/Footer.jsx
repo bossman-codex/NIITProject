@@ -6,7 +6,7 @@ const Footer = () => {
     <div className="bg-black py-10 px-6">
       <div className=" e-flex-container-footer lg:container mx-auto text-gray-100">
         <div>
-          <h2>© 2021 Ezone</h2>
+          <h2>© 2021 PhoneLink</h2>
         </div>
         <div>
           <h2 className="pb-2">Social Handles</h2>
@@ -34,7 +34,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h2>| Ebraj Grg |</h2>
+          <h2>| OkpTg |</h2>
         </div>
       </div>
     </div>
