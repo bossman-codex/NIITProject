@@ -5,6 +5,7 @@ import "./Payment.scss";
 const Payment = ({ retrievedData, checkTheMailSent, deleteTheCart }) => {
   const [name, setName] = useState();
   const [email, setEmail] = useState();
+  console.log(name,email)
   const submitDetails = (e) => {
     e.preventDefault();
     emailjs.sendForm(
