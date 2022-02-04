@@ -13,7 +13,7 @@ const Home = () => {
           <div className="e__home">
             <div className="e__home--left">
               <h1 className="font-serif font-bold text-gray-100 text-5xl md:text-7xl">
-                Ezone
+                PhoneLink
               </h1>
               <h2 className="text-gray-300 font-light text-xl md:text-2xl py-2">
                 Buy the stuffs under the affordable prices!
