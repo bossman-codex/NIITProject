@@ -11,7 +11,7 @@ const Navbar = ({ total_items }) => {
       <nav className="lg:container mx-auto text-gray-100 flex items-center justify-between">
         <div>
           <h4 className="font-bold">
-            <PageLink to="/">EZONE</PageLink>
+            <PageLink to="/">PHONELINK</PageLink>
           </h4>
         </div>
         <ul className="flex items-center text-gray-400 py-1">
