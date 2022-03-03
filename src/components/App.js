@@ -12,12 +12,14 @@ import { commerce } from "../lib/commerce";
 // Components
 import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
+import Explore from "./Explore/Explore"
 import Laptops from "./Laptops/Laptops";
 import Phones from "./Phones/Phones";
 import Footer from "./Footer/Footer";
 import SpecsCmp from "./SpecsCmp/SpecsCmp";
 import Cart from "./Cart/Cart";
 import PageNotFound from "./PageNotFound";
+import SecondNav from "./SecondNav/SecondNav";
 
 const App = () => {
   const [currentItem, setCurrentItem] = useState([]);
@@ -55,13 +57,13 @@ const App = () => {
   // useEffect for the laptopsList
   useEffect(() => {
     commerce.products
-      .list({ category_slug: ["laptop"] })
+      .list({ category_slug: ["laptop-accessories"] })
       .then((response) => setLaptopsList(response.data));
   }, []);
   // useEffect for the phonesList
   useEffect(() => {
     commerce.products
-      .list({ category_slug: ["phone"] })
+      .list({ category_slug: ["womens-fashion"] })
       .then((response) => setPhonesList(response.data));
   }, []);
   // useEffect for retrieving the products
@@ -78,10 +80,12 @@ const App = () => {
     <Router>
       <div className="flex flex-col w-full min-h-screen justify-between">
         <Navbar total_items={retrievedData.total_items} />
+        <SecondNav/>
         <Switch>
           <Route path="/" exact>
             <div>
               <Home />
+              <Explore />
               <Laptops
                 getCurrentItem={getCurrentItem}
                 laptopsList={laptopsList}

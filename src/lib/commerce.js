@@ -1,6 +1,8 @@
 import Commerce from "@chec/commerce.js";
 
-export const commerce = new Commerce(
-  process.env.REACT_APP_CHEC_PUBLIC_KEY,
-  true
-);
+export const commerce = new Commerce('pk_test_405281659e6ee3b2e326331f9edab94541bf4ace66713');
+
+// commerce.products.list({
+//    sortBy: 'price',
+//   sortOrder: 'desc',
+// }).then((product) => console.log(product));

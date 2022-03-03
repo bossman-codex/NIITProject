@@ -14,3 +14,15 @@
     place-content: center;
   }
 }
+ .searchbar {
+   display: flex;
+   flex: 1;
+   justify-content: center;
+ }
+
+ .search__input{
+    height: 40px;
+    padding: 10px;
+    border: none;
+    width: 90%;
+ }

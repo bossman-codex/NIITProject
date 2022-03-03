@@ -8,13 +8,20 @@ const Products = ({ laptop, getCurrentItem }) => {
   };
   return (
     <>
+      <PageLink
+            to="/specs"
+            onClick={() => {
+              getTheCurrentItem(laptop);
+            }}
+          >
       <div key={laptop.id} className="flex flex-col justify-between p-4">
-        <div>
-          <img src={laptop.image.url} alt="laptop.name" />
+        <div className="img_home">
+          <img className="img__main" src={laptop.image.url} alt="laptop.name" />
         </div>
         <div className="h-full py-2 flex flex-col justify-between items-center">
           <div>
-            <h2 className="pb-2 px-5">{laptop.name}</h2>
+              <h2 className=" text pb-2 px-5">{laptop.name}</h2>
+              {/* <span>...</span> */}
           </div>
           <h4 className="text-xl font-black">
             {laptop.price.formatted_with_symbol}
@@ -31,7 +38,8 @@ const Products = ({ laptop, getCurrentItem }) => {
             Show Specs
           </PageLink>
         </div>
-      </div>
+        </div>
+        </PageLink>
     </>
   );
 };

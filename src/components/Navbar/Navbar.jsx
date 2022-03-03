@@ -14,6 +14,9 @@ const Navbar = ({ total_items }) => {
             <PageLink to="/">PHONELINK</PageLink>
           </h4>
         </div>
+        <div className="searchbar">
+          <input className="search__input" type="text" />
+        </div>
         <ul className="flex items-center text-gray-400 py-1">
           <li className="px-3 hover:text-gray-100  cursor-pointer">
             <Link to="laptops-cmp" spy={true} smooth={true} duration={600}>
