@@ -1,14 +1,23 @@
-import React from "react";
+import React,{useState} from "react";
 import "./Navbar.scss";
 import Sidebar from "../Sidebar";
+
 
 //Importing this way so the I can use both the links
 import { Link as PageLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
 const Navbar = ({ total_items }) => {
+
+  // const [search, setSearch] = useState("") 
+  
+  // const onchange = () => {
+    
+  // } 
+
   return (
     
+
     <nav className=" nav bg-black py-6 px-6">
       <div className="lg:container mx-auto text-gray-100 flex items-center justify-between">
         <span style={{paddingRight: 10} }>
@@ -21,7 +30,7 @@ const Navbar = ({ total_items }) => {
           </h4>
         </div>
         <div className="searchbar">
-          <input className="search__input" type="text" />
+          <input className="search__input" type="text"  />
         </div>
         <ul className="flex items-center text-gray-400 py-1">
           <li className="px-3 hover:text-gray-100  cursor-pointer">

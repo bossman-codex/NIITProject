@@ -47,11 +47,11 @@ const showSubnav = () => setSubnav(!subnav);
 
 return (
 	<>
-	<Link to={item.path}
+	<SidebarLink to={item.path}
 	onClick={item.subNav && showSubnav}>
-		<div>
+		<div style={{ display: "flex" }}>
 		{item.icon}
-		<span>{item.title}</span>
+		<SidebarLabel>{item.title}</SidebarLabel>
 		</div>
 		<div>
 		{item.subNav && subnav
@@ -60,14 +60,14 @@ return (
 			? item.iconClosed
 			: null}
 		</div>
-	</Link>
+	</SidebarLink>
 	{subnav &&
 		item.subNav.map((item, index) => {
 		return (
-			<Link to={item.path} key={index}>
+			<DropdownLink to={item.path} key={index}>
 			{item.icon}
-			<span>{item.title}</span>
-			</Link>
+			<SidebarLabel>{item.title}</SidebarLabel>
+			</DropdownLink>
 		);
 		})}
 	</>
