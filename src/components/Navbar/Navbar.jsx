@@ -1,20 +1,29 @@
-import React from "react";
+import React,{useEffect , useState} from "react";
 import "./Navbar.scss";
 import Sidebar from "../Sidebar";
-
+import commerce from "@chec/commerce.js";
+import Brands from "../Brand/Brands";
 
 //Importing this way so the I can use both the links
 import { Link as PageLink } from "react-router-dom";
 import { Link } from "react-scroll";
 
-const Navbar = ({ total_items }) => {
+const Navbar = ({ total_items  , getCurrentItem}) => {
 
   const [search, setSearch] = useState("") 
+  const [Brand , setBrand] =useState()
   
-  // const onchange = () => {
-    
-  // } 
+  useEffect(() => {
+         commerce.products.list({ query: search, })
+            .then(response => setBrand(response.data));
+    } );
 
+  const clicked = () => {
+    <Brands
+                getCurrentItem={getCurrentItem}
+                BrandList={Brand}
+              />
+  }
   return (
     
 
@@ -30,7 +39,8 @@ const Navbar = ({ total_items }) => {
           </h4>
         </div>
         <div className="searchbar">
-          <input className="search__input" type="text"  onChange={e => setSearch(e.target.value)}/>
+          <input className="search__input" type="text" onChange={e => setSearch(e.target.value)} />
+          <button onClick={clicked}></button>
         </div>
         <ul className="flex items-center text-gray-400 py-1">
           <li className="px-3 hover:text-gray-100  cursor-pointer">

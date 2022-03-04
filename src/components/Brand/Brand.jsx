@@ -14,7 +14,7 @@ function Brand({getCurrentItem}) {
     useEffect(() => {
          commerce.products.list({ query: name, })
             .then(response => setBrand(response.data));
-    } ,[] );
+    });
    
    
 

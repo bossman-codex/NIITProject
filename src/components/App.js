@@ -76,7 +76,7 @@ const App = () => {
   return (
     <Router>
       <div className="flex flex-col w-full min-h-screen justify-between">
-        <Navbar total_items={retrievedData.total_items} />
+        <Navbar total_items={retrievedData.total_items} getCurrentItem={getCurrentItem} />
         <SecondNav/>
         <Switch>
           <Route path="/" exact>
