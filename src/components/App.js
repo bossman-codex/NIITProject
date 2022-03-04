@@ -20,6 +20,8 @@ import SpecsCmp from "./SpecsCmp/SpecsCmp";
 import Cart from "./Cart/Cart";
 import PageNotFound from "./PageNotFound";
 import SecondNav from "./SecondNav/SecondNav";
+import Brand from "./Brand/Brand";
+import MainSection from "./Section/MainSection";
 
 const App = () => {
   const [currentItem, setCurrentItem] = useState([]);
@@ -29,6 +31,7 @@ const App = () => {
   const [cartContents, setCartContents] = useState([]);
   const getCurrentItem = (curItem) => {
     setCurrentItem(curItem);
+    
   };
 
   /**
@@ -57,7 +60,7 @@ const App = () => {
   // useEffect for the laptopsList
   useEffect(() => {
     commerce.products
-      .list({ category_slug: ["laptop-accessories"] })
+      .list({ category_slug: ["phone"] })
       .then((response) => setLaptopsList(response.data));
   }, []);
   // useEffect for the phonesList
@@ -90,7 +93,7 @@ const App = () => {
                 getCurrentItem={getCurrentItem}
                 laptopsList={laptopsList}
               />
-              <Phones getCurrentItem={getCurrentItem} phonesList={phonesList} />
+              {/* <Phones getCurrentItem={getCurrentItem} phonesList={phonesList} /> */}
             </div>
           </Route>
           <Route path="/specs">
@@ -110,6 +113,13 @@ const App = () => {
                 deleteTheCart={deleteTheCart}
               />
             </div>
+          </Route>
+          <Route path="/brands/:name">
+           <Brand  getCurrentItem={getCurrentItem}/>
+          </Route>
+
+          <Route path="/Category/:name">
+           <MainSection getCurrentItem={getCurrentItem}/>
           </Route>
           <Route>
             <div className="flex-grow">

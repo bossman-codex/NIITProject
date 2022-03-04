@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.scss";
+import Sidebar from "../Sidebar";
 
 //Importing this way so the I can use both the links
 import { Link as PageLink } from "react-router-dom";
@@ -7,8 +8,13 @@ import { Link } from "react-scroll";
 
 const Navbar = ({ total_items }) => {
   return (
-    <div className="bg-black py-6 px-6">
-      <nav className="lg:container mx-auto text-gray-100 flex items-center justify-between">
+    
+    <nav className=" nav bg-black py-6 px-6">
+      <div className="lg:container mx-auto text-gray-100 flex items-center justify-between">
+        <span style={{paddingRight: 10} }>
+           <Sidebar />
+        </span>
+       
         <div>
           <h4 className="font-bold">
             <PageLink to="/">PHONELINK</PageLink>
@@ -45,8 +51,9 @@ const Navbar = ({ total_items }) => {
             <span className="e_cart_num">{total_items}</span>
           </li>
         </ul>
-      </nav>
-    </div>
+     
+      </div>
+    </nav>
   );
 };
 

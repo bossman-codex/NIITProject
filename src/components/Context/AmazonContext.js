@@ -17,7 +17,7 @@ export function AmazonContextProvider(props) {
     useEffect(() => {
         fetch("https://amazon-navbar.herokuapp.com/fetch").then(data => data.json()).then(response => {
             setEntryStore(response);
-        })
+        }).catch(console.log)
     }, []);
 
     const value = {
