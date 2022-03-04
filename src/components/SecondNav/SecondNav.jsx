@@ -1,5 +1,4 @@
 import React from 'react'
-import Categories from '../Catergories/Categories'
 import "./SecondNav.scss"
 import  {Link} from "react-router-dom"
 

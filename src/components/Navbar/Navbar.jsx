@@ -1,4 +1,4 @@
-import React,{useState} from "react";
+import React from "react";
 import "./Navbar.scss";
 import Sidebar from "../Sidebar";
 
@@ -9,7 +9,7 @@ import { Link } from "react-scroll";
 
 const Navbar = ({ total_items }) => {
 
-  // const [search, setSearch] = useState("") 
+  const [search, setSearch] = useState("") 
   
   // const onchange = () => {
     
@@ -30,7 +30,7 @@ const Navbar = ({ total_items }) => {
           </h4>
         </div>
         <div className="searchbar">
-          <input className="search__input" type="text"  />
+          <input className="search__input" type="text"  onChange={e => setSearch(e.target.value)}/>
         </div>
         <ul className="flex items-center text-gray-400 py-1">
           <li className="px-3 hover:text-gray-100  cursor-pointer">

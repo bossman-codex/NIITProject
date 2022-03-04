@@ -14,7 +14,6 @@ import Navbar from "./Navbar/Navbar";
 import Home from "./Home/Home";
 import Explore from "./Explore/Explore"
 import Laptops from "./Laptops/Laptops";
-import Phones from "./Phones/Phones";
 import Footer from "./Footer/Footer";
 import SpecsCmp from "./SpecsCmp/SpecsCmp";
 import Cart from "./Cart/Cart";
@@ -26,7 +25,6 @@ import MainSection from "./Section/MainSection";
 const App = () => {
   const [currentItem, setCurrentItem] = useState([]);
   const [laptopsList, setLaptopsList] = useState([]);
-  const [phonesList, setPhonesList] = useState([]);
   const [retrievedData, setRetrievedData] = useState([]);
   const [cartContents, setCartContents] = useState([]);
   const getCurrentItem = (curItem) => {
@@ -63,12 +61,8 @@ const App = () => {
       .list({ category_slug: ["phone"] })
       .then((response) => setLaptopsList(response.data));
   }, []);
-  // useEffect for the phonesList
-  useEffect(() => {
-    commerce.products
-      .list({ category_slug: ["womens-fashion"] })
-      .then((response) => setPhonesList(response.data));
-  }, []);
+ 
+  
   // useEffect for retrieving the products
   useEffect(
     () =>

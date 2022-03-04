@@ -9,13 +9,13 @@ function MainSection({getCurrentItem}) {
     const [section, setSection] = useState([])
 
     let {name } = useParams();
-   console.log(name)
+  
     
     useEffect(() => {
-          commerce.products
-      .list({ category_slug: name })
-      .then((response) => setSection(response.data));
-  }, []);
+        commerce.products
+            .list({ category_slug: name })
+            .then((response) => setSection(response.data));
+    });
     
    
    
