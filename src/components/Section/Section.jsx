@@ -5,7 +5,7 @@ import {useParams} from "react-router-dom"
 function Section({ getCurrentItem, ProductList }) {
     let {name} = useParams()
   return (
-         <div className="pt-8 px-6">
+         <div>
       <div className="lg:container mx-auto laptops-cmp">
         <div>
           {/* All about the title Section */}

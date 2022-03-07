@@ -7,7 +7,7 @@ import Products from "../Products/Products";
 const Brands = ({ getCurrentItem, BrandList }) => {
     let {name} =useParams()
   return (
-    <div className="pt-8 px-6">
+    <div >
       <div className="lg:container mx-auto laptops-cmp">
         <div>
           {/* All about the title Section */}

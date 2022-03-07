@@ -18,7 +18,6 @@ import Footer from "./Footer/Footer";
 import SpecsCmp from "./SpecsCmp/SpecsCmp";
 import Cart from "./Cart/Cart";
 import PageNotFound from "./PageNotFound";
-import SecondNav from "./SecondNav/SecondNav";
 import Brand from "./Brand/Brand";
 import MainSection from "./Section/MainSection";
 
@@ -77,7 +76,6 @@ const App = () => {
     <Router>
       <div className="flex flex-col w-full min-h-screen justify-between">
         <Navbar total_items={retrievedData.total_items} getCurrentItem={getCurrentItem} />
-        <SecondNav/>
         <Switch>
           <Route path="/" exact>
             <div>

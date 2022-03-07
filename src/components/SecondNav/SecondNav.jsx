@@ -12,7 +12,7 @@ function SecondNav() {
                  
               <div class="section">
                   <Link>
-                   <p> Your Amazon.com</p>
+                   <p> Your TechStore</p>
                   </Link>
               </div>
               <div class="section">
@@ -21,15 +21,10 @@ function SecondNav() {
                   </Link>
                  
               </div>
+              
               <div class="section">
                   <Link>
-                       Gift Cards & Registry
-                  </Link>
-                 
-              </div>
-              <div class="section">
-                  <Link>
-                  Sell
+                  Sell (coming Soon)
                   </Link>
                   
               </div>

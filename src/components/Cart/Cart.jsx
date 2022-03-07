@@ -31,7 +31,7 @@ const Cart = ({
                 <div>Item</div>
                 <div>Description</div>
                 <div>Quantity</div>
-                <div>T.Price</div>
+                <div>Price</div>
                 <div>Remove</div>
               </div>
               {cartContents.map((cartItem) => {

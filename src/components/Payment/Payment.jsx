@@ -9,10 +9,10 @@ const Payment = ({ retrievedData, checkTheMailSent, deleteTheCart }) => {
   const submitDetails = (e) => {
     e.preventDefault();
     emailjs.sendForm(
-      "service_l3c23cl",
-      "contact_form",
+      "service_9xouhp9",
+      "template_vylfwv4",
       e.target,
-      "user_LAt8z94Bl1sX0SxDEFy0U"
+      "user_qFkba0HwERooGdaTXeqoc"
     );
   };
   return (
@@ -58,7 +58,7 @@ const Payment = ({ retrievedData, checkTheMailSent, deleteTheCart }) => {
               </div>
               <div className="my-3 e-flex-form">
                 <div className="p-4 rounded-lg bg-gray-900 text-gray-100">
-                  T.Quantity
+                  Quantity
                 </div>
                 <div className="w-full">
                   <input
@@ -73,7 +73,7 @@ const Payment = ({ retrievedData, checkTheMailSent, deleteTheCart }) => {
               </div>
               <div className="my-3 e-flex-form">
                 <div className="p-4 rounded-lg bg-gray-900 text-gray-100">
-                  T.Amount
+                  Amount
                 </div>
                 <div className="w-full">
                   <input

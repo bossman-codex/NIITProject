@@ -1,6 +1,5 @@
 import React from "react";
 import * as FaIcons from "react-icons/fa";
-import * as AiIcons from "react-icons/ai";
 import * as IoIcons from "react-icons/io";
 import * as RiIcons from "react-icons/ri";
 
@@ -8,7 +7,7 @@ export const SidebarData = [
 {
         title: "Mobile Devices",
     path: "#",
-	icon: <AiIcons.AiFillHome />,
+	icon: <FaIcons.FaMobile />,
 	iconClosed: <RiIcons.RiArrowDownSFill />,
 	iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -16,7 +15,7 @@ export const SidebarData = [
 	{
 		title: "Phones",
 		path: "/Category/phone",
-		icon: <IoIcons.IoIosPaper />,
+		icon: <FaIcons.FaMobile />,
 	},
 	{
 		title: "Mobile Tablets",
@@ -28,7 +27,7 @@ export const SidebarData = [
 {
     title: "Computing",
        path: "#",
-	icon: <IoIcons.IoIosPaper />,
+	icon: <FaIcons.FaLaptop />,
 	iconClosed: <RiIcons.RiArrowDownSFill />,
 	iconOpened: <RiIcons.RiArrowUpSFill />,
 
@@ -36,7 +35,7 @@ export const SidebarData = [
 	{
 		title: "Laptop",
 		path: "/Category/laptop",
-		icon: <IoIcons.IoIosPaper />,
+		icon: <FaIcons.FaLaptop />,
 		cName: "sub-nav",
 	},
 	{
@@ -80,7 +79,7 @@ export const SidebarData = [
 },
 {
 	title: "Games",
-	path: "/events",
+	path: "#",
 	icon: <FaIcons.FaEnvelopeOpenText />,
 
 	iconClosed: <RiIcons.RiArrowDownSFill />,
